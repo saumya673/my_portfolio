@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LaunchIcon from "@mui/icons-material/Launch";
 import Link from "next/link";
 
 interface ProjectCardProps {
@@ -17,6 +18,7 @@ interface ProjectCardProps {
   title?: string;
   description?: string;
   githubLink?: string;
+  deployedLink?: string;
   internalProject?: boolean;
   expanded: boolean;
   onToggle: () => void;
@@ -29,6 +31,7 @@ export default function ProjectCard({
   title,
   description = "",
   githubLink,
+  deployedLink,
   internalProject,
   expanded,
   onToggle,
@@ -93,15 +96,26 @@ export default function ProjectCard({
 
       <CardActions sx={{ mt: "auto" }}>
         {!internalProject && (
-          <IconButton
-            component={Link}
-            href={githubLink || "#"}
-            target="_blank"
-            aria-label="GitHub"
-            sx={{ color: "grey.100" }}
-          >
-            <GitHubIcon />
-          </IconButton>
+          <>
+            <IconButton
+              component={Link}
+              href={githubLink || "#"}
+              target="_blank"
+              aria-label="GitHub"
+              sx={{ color: "grey.100" }}
+            >
+              <GitHubIcon />
+            </IconButton>
+            <IconButton
+              component={Link}
+              href={deployedLink || "#"}
+              target="_blank"
+              aria-label="Launch"
+              sx={{ color: "grey.100" }}
+            >
+              <LaunchIcon />
+            </IconButton>
+          </>
         )}
 
         <Button size="small"></Button>
