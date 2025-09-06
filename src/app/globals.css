@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Indie+Flower&family=Island+Moments&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -5,6 +6,11 @@
   --foreground: #171717;
   margin: 0;
   padding: 0;
+}
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @theme inline {
