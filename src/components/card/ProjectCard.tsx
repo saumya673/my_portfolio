@@ -1,47 +1,110 @@
+"use client";
+
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Chip from "@mui/material/Chip";
+import IconButton from "@mui/material/IconButton";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import Link from "next/link";
 
 interface ProjectCardProps {
+  id: string;
   image: string;
   title?: string;
   description?: string;
+  githubLink?: string;
+  internalProject?: boolean;
+  expanded: boolean;
+  onToggle: () => void;
 }
+
+const DESCRIPTION_THRESHOLD = 100;
 
 export default function ProjectCard({
   image,
   title,
-  description,
+  description = "",
+  githubLink,
+  internalProject,
+  expanded,
+  onToggle,
 }: ProjectCardProps) {
+  const isLongDescription = description.length > DESCRIPTION_THRESHOLD;
+
+  const displayedDescription =
+    !expanded && isLongDescription
+      ? description.substring(0, DESCRIPTION_THRESHOLD) + "..."
+      : description;
+
   return (
     <Card
       sx={{
         maxWidth: 300,
-        backgroundColor: "grey.800",
+        backgroundColor: "black",
         color: "white",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.8)",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.4)",
+        display: "flex",
+        flexDirection: "column",
+        borderRadius: 2,
       }}
     >
       <CardMedia
         component="img"
-        alt="green iguana"
+        alt={title || "Project Image"}
         height="140"
         image={image}
+        sx={{ objectFit: "cover" }}
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {title}
-        </Typography>
+
+      <CardContent sx={{ flexGrow: 1 }}>
+        <div className="flex items-start justify-between gap-2">
+          <Typography gutterBottom variant="h6" component="h3">
+            {title}
+          </Typography>
+          {internalProject && (
+            <Chip
+              label="Internal"
+              size="small"
+              variant="outlined"
+              sx={{ color: "white", borderColor: "white" }}
+            />
+          )}
+        </div>
+
         <Typography variant="body2" sx={{ color: "white" }}>
-          {description}
+          {displayedDescription}
         </Typography>
+
+        {isLongDescription && (
+          <Button
+            type="button"
+            size="small"
+            onClick={onToggle}
+            sx={{ mt: 1, p: 0 }}
+          >
+            {expanded ? "View Less" : "View More"}
+          </Button>
+        )}
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+
+      <CardActions sx={{ mt: "auto" }}>
+        {!internalProject && (
+          <IconButton
+            component={Link}
+            href={githubLink || "#"}
+            target="_blank"
+            aria-label="GitHub"
+            sx={{ color: "grey.100" }}
+          >
+            <GitHubIcon />
+          </IconButton>
+        )}
+
+        <Button size="small"></Button>
       </CardActions>
     </Card>
   );

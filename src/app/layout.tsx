@@ -40,7 +40,11 @@ export default function RootLayout({
             >
               <Header />
               <Toolbar />
-              <Container component="main" sx={{ py: 4, flex: "1" }}>
+              <Container
+                component="main"
+                disableGutters
+                sx={{ py: 4, px: 0, flex: "1" }}
+              >
                 {children}
               </Container>
               <Footer />

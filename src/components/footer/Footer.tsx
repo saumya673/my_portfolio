@@ -39,7 +39,7 @@ export default function Footer() {
             </IconButton>
             <IconButton
               component={Link}
-              href="https://linkedin.com/in/saumya2105"
+              href="https://linkedin.com/in/saumya0512"
               target="_blank"
               aria-label="LinkedIn"
               sx={{ color: "grey.100" }}
