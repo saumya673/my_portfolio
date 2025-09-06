@@ -3,7 +3,7 @@ import DownloadFileButton from "../button/Button";
 
 export default function ImageAvatars() {
   return (
-    <div className="flex flex-col justify-center items-center gap-8">
+    <div className="flex flex-col justify-center items-center gap-8 mt-16">
       <Avatar
         alt="Saumya"
         src="/profile/profile.jpg"
