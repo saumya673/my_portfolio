@@ -1,3 +1,9 @@
+import Projects from "@/components/projects/Projects";
+
 export default function ProjectsPage() {
-  return <h1>Projects</h1>;
+  return (
+    <div>
+      <Projects />
+    </div>
+  );
 }

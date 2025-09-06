@@ -1,3 +1,5 @@
+import Home from "@/components/home/Home";
+
 export default function HomePage() {
-  return <h1>Welcome to my portfolio 👋</h1>;
+  return <Home />;
 }
