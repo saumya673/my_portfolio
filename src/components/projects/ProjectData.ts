@@ -25,6 +25,15 @@ export const projects: Project[] = [
       image: aiJobMentor.src,
       internalProject: false,
     },
+      {
+      id: "todo-app",
+      title: "To Do App",
+      description: "Simple task management application with a built-in chatbot to quickly add tasks through natural conversation.",
+      githubLink: "https://github.com/saumya673/nextjs-todo",
+      deployedLink: "https://saumya-nextjs-todo.vercel.app",
+      image: toDoApp.src,
+      internalProject: false,
+    },
     {
       id: "stockmate",
       title: "Stockmate",
@@ -39,14 +48,5 @@ export const projects: Project[] = [
         "Migrated from desktop to web, enabling an interactive multi-step workflow with real-time status updates and parallel session handling. Built with a Kotlin backend and BFF in NextJS, supporting Excel generation and smooth user actions. The migration streamlined planogram creation and boosted usage by 70%.",
       image: planogramGenerator.src,
       internalProject: true,
-    },
-    {
-      id: "todo-app",
-      title: "To Do App",
-      description: "Simple task management application with a built-in chatbot to quickly add tasks through natural conversation.",
-      githubLink: "https://github.com/saumya673/nextjs-todo",
-      deployedLink: "https://saumya-nextjs-todo.vercel.app",
-      image: toDoApp.src,
-      internalProject: false,
     },
   ];
