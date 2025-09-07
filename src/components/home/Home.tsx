@@ -155,6 +155,7 @@ export default function HomeHero() {
           fontSize: { xs: "0.95rem", md: "1.1rem" },
           maxWidth: 900,
           opacity: 0.95,
+          padding: "0 12px",
         }}
       >
         I build fast, accessible UIs with React/Next.js & TypeScript, and
