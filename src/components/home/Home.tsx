@@ -9,7 +9,7 @@ export default function ImageAvatars() {
         src="/profile/profile.jpg"
         sx={{ width: 150, height: 150 }}
       />
-      <div className="text-sm md:text-xl text-center font-semibold satisfy-regular">
+      <div className="text-sm md:text-xl text-center font-semibold">
         Full-Stack Engineer crafting sleek UIs and robust backends with React,
         Next.js, TypeScript, Tailwind, and FastAPI. <br />
         Turning ideas into scalable, cloud-ready solutions with a focus on

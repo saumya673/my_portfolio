@@ -83,7 +83,7 @@ export default function ProjectCard({
             type="button"
             size="small"
             onClick={onToggle}
-            sx={{ mt: 1, p: 0 }}
+            sx={{ mt: 1, p: 0, color: "#FEF8C4" }}
           >
             {expanded ? "View Less" : "View More"}
           </Button>

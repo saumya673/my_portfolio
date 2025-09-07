@@ -133,7 +133,7 @@ export default function About() {
       </div>
 
       {/* Tabs */}
-      <Box sx={{ width: "100%", maxWidth: 920, mt: 1 }}>
+      <Box sx={{ width: "100%", maxWidth: 920, mt: 1, px: 2 }}>
         <Tabs
           value={tab}
           onChange={handleChange}
@@ -359,6 +359,34 @@ export default function About() {
                 <Box sx={{ display: "flex", alignItems: "center", gap: 0.6 }}>
                   <EmojiEventsIcon fontSize="small" />
                   <Typography variant="body2">Percent - 89.6%</Typography>
+                </Box>
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: 1,
+              }}
+            >
+              <Box>
+                <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
+                  AISSCE- X
+                </Typography>
+                <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                  Shivalik Public School
+                </Typography>
+              </Box>
+              <Box sx={{ display: "flex", gap: 2, opacity: 0.9 }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 0.6 }}>
+                  <CalendarMonthIcon fontSize="small" />
+                  <Typography variant="body2">2015-2016</Typography>
+                </Box>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 0.6 }}>
+                  <EmojiEventsIcon fontSize="small" />
+                  <Typography variant="body2">Percent - 93%</Typography>
                 </Box>
               </Box>
             </Box>
