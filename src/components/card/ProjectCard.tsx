@@ -47,12 +47,8 @@ export default function ProjectCard({
     <Card
       sx={{
         maxWidth: 300,
-        backgroundColor: "black",
-        color: "white",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.4)",
         display: "flex",
         flexDirection: "column",
-        borderRadius: 2,
       }}
     >
       <CardMedia
