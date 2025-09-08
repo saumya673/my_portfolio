@@ -96,7 +96,7 @@ export default function About() {
 
   return (
     <div className="flex flex-col justify-center items-center gap-6 mt-16">
-      <div className="text-3xl font-bold text-center">About Me</div>
+      <div className="text-3xl font-bold underline text-center">About Me</div>
       <div className="opacity-80 text-center">
         Full-Stack Engineer | Problem Solver | Tech Enthusiast
       </div>

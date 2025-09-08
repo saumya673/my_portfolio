@@ -15,21 +15,24 @@ const Projects = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-12 justify-center">
-      {projects.map((p) => (
-        <ProjectCard
-          key={p.id}
-          id={p.id}
-          image={p.image}
-          title={p.title}
-          description={p.description}
-          githubLink={p.githubLink}
-          deployedLink={p.deployedLink}
-          internalProject={p.internalProject}
-          expanded={!!expandedMap[p.id]}
-          onToggle={() => handleToggle(p.id)}
-        />
-      ))}
+    <div className="flex flex-col justify-center items-center gap-6 mt-16">
+      <div className="text-3xl font-bold underline text-center">Projects</div>
+      <div className="flex flex-wrap gap-12 justify-center">
+        {projects.map((p) => (
+          <ProjectCard
+            key={p.id}
+            id={p.id}
+            image={p.image}
+            title={p.title}
+            description={p.description}
+            githubLink={p.githubLink}
+            deployedLink={p.deployedLink}
+            internalProject={p.internalProject}
+            expanded={!!expandedMap[p.id]}
+            onToggle={() => handleToggle(p.id)}
+          />
+        ))}
+      </div>
     </div>
   );
 };
